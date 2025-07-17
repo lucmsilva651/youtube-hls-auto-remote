@@ -4,7 +4,7 @@ youtube_id = "1oh9IEwBbFY"
 url = f"https://www.youtube.com/watch?v={youtube_id}"
 
 result = subprocess.run(
-    ["yt-dlp", "-g", "-f", "best[height<=720]", url],
+    ["python", "-m", "yt_dlp", "-g", "-f", "best[height<=720]", url],
     capture_output=True,
     text=True
 )
